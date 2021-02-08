@@ -1,21 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Heading from './Heading';
+import Counter from './Counter';
 class App extends React.Component {
 
   public render() {
+
     return (
       <div>
-        <h1>{this.label('React')}</h1>
-        <p>Nice TDD</p>
+        <Heading/>
+        <Counter label={'Current'}/>
       </div>
     );
   }
 
-  public label(name: string) {
-    return `Hello ${name.toUpperCase()}`;
-  }
 }
 
 export default App;

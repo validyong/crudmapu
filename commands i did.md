@@ -26,3 +26,16 @@ VSCODEだと一度package-lock.jsonの中身を確認しないとEnzymeがエラ
 プラグイン入れても駄目ですね...
 
 WebStromに乗り換えて、どうぞ
+
+installing ESLint
+
+```powershell
+yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --dev
+```
+
+`mount` does not work because of the version `enzyme-adapter-react-16` compared to my `react` version at 17, sadly...
+
+Unofficial adapter for React 17 for Enzyme.
+```powershell
+yarn add --dev @wojtekmaj/enzyme-adapter-react-17
+```

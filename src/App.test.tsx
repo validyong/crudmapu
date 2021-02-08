@@ -1,26 +1,26 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
+import { configure } from 'enzyme'
+import ReactSeventeenAdapter from '@wojtekmaj/enzyme-adapter-react-17'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import ReactDOM from 'react-dom';
 
+configure({ adapter: new ReactSeventeenAdapter() })
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
 });
 
-it('renders the heading', () => {
-  const wrapper = shallow(<App/>);
-  expect(wrapper.find('h1').text()).toBe('Hello REACT');
-});
-
-it('renders the paragraph', () => {
-  const wrapper = shallow(<App/>);
-  expect(wrapper.find('p').text()).toBe('Nice TDD');
-});
-
-it('generates a label', () => {
-  const a = new App({});
-  expect(a.label('React')).toBe('Hello REACT');
+it('renders the app and the heading', () => {
+    const wrapper = mount(<App />);
+    expect(wrapper.find('h1').text())
+        .toBe('Hello React');
+    expect(wrapper.find('.counter label').text())
+        .toBe('Current');
+    expect(wrapper.find('.counter span').text())
+        .toBe('0');
 });
