@@ -10,6 +10,16 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
+it('renders the heading', () => {
+  const wrapper = shallow(<App/>);
+  expect(wrapper.find('h1').text()).toBe('Hello React');
+});
+
+it('renders the paragraph', () => {
+  const wrapper = shallow(<App/>);
+  expect(wrapper.find('p').text()).toBe('Nice TDD');
+});
+
 it('generates a label', () => {
   const a = new App({});
   expect(a.label()).toBe('Hello React');
