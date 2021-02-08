@@ -12,7 +12,7 @@ it('renders without crashing', () => {
 
 it('renders the heading', () => {
   const wrapper = shallow(<App/>);
-  expect(wrapper.find('h1').text()).toBe('Hello React');
+  expect(wrapper.find('h1').text()).toBe('Hello REACT');
 });
 
 it('renders the paragraph', () => {
@@ -22,5 +22,5 @@ it('renders the paragraph', () => {
 
 it('generates a label', () => {
   const a = new App({});
-  expect(a.label()).toBe('Hello React');
+  expect(a.label('React')).toBe('Hello REACT');
 });

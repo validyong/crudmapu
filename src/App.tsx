@@ -7,14 +7,14 @@ class App extends React.Component {
   public render() {
     return (
       <div>
-        <h1>{this.label()}</h1>
+        <h1>{this.label('React')}</h1>
         <p>Nice TDD</p>
       </div>
     );
   }
 
-  public label() {
-    return 'Hello React';
+  public label(name: string) {
+    return `Hello ${name.toUpperCase()}`;
   }
 }
 
