@@ -72,3 +72,5 @@ react-router-dom
 ```powershell
 yarn add react-router-dom
 ```
+
+https://stackblitz.com/edit/react-router-typescript-example
