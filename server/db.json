@@ -1,0 +1,16 @@
+[
+    {
+        "isbn": "1234567890123",
+        "book_name": "Hyper Lens",
+        "company": "Zyne",
+        "price": 555,
+        "genre_code": 5
+    },
+    {
+        "isbn": "1234567890124",
+        "book_name": "Totique Lens",
+        "company": "Zyne",
+        "price": 555,
+        "genre_code": 5
+    }
+]

@@ -40,10 +40,35 @@ Unofficial adapter for React 17 for Enzyme.
 yarn add --dev @wojtekmaj/enzyme-adapter-react-17
 ```
 
-github no contribution
-
 material-ui
 
 ```powershell
 yarn add @types/material-ui
+yarn add @material-ui/core
+```
+
+json-server (not global for the time being)
+
+this builds a fake rest API server
+
+```powershell
+yarn add json-server
+```
+
+redux
+```powershell
+yarn add redux
+yarn add react-redux
+yarn add @types/react-redux
+yarn add redux-thunk
+```
+
+axios
+```powershell
+yarn add axios
+```
+
+react-router-dom
+```powershell
+yarn add react-router-dom
 ```
