@@ -39,3 +39,5 @@ Unofficial adapter for React 17 for Enzyme.
 ```powershell
 yarn add --dev @wojtekmaj/enzyme-adapter-react-17
 ```
+
+github no contribution
