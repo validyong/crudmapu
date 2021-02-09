@@ -1,26 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Heading from './Heading';
+import Counter from './Counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface ICounterState {
+  count: number
+}
+class App extends React.Component<object, ICounterState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  public increment = (isShift: boolean) => {
+    const inc: number = isShift ? 10 : 1;
+    this.setState({ count: this.state.count + inc });
+  }
+
+  public render() {
+    return (
+      <div>
+        <Heading />
+        <Counter
+          label={'Current'}
+          count={this.state.count}
+          onCounterIncrease={this.increment}
+        />
+      </div>
+    )
+  }
 }
 
 export default App;
